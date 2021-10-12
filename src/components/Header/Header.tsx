@@ -12,7 +12,7 @@ export const Header = ({currMonth, currYear}: IProps) => {
   const dispatch = useDispatch()
   return (
     <div className={s.header}>
-      <button onClick={() => dispatch({type: 'nextMonth'})}>prev</button>
+      <button onClick={() => dispatch({type: 'prev'})}>prev</button>
       <h1>{currMonth} {currYear}</h1>
       <button>next</button>
     </div>

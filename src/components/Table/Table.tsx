@@ -10,7 +10,7 @@ interface IProps {
 
 export const Table = ({data}: IProps) => {
   console.log(`data`, data)
-  const {month, index} = data
+  const {month, index, currYear, currMonth} = data
   return (
     <section className={s.tableWrapper}>
       <table className={s.table}>
@@ -20,7 +20,7 @@ export const Table = ({data}: IProps) => {
           </tr>
         </thead>
         <tbody>
-          {month[index].days.map((row: any, i: any) => <tr>{row.map((col: any, i: any) => <td>{col.date}</td>)}</tr>)}
+          {data[currYear][currMonth].map((row: any, i: any) => <tr>{row.map((col: any, i: any) => <td>{col.date}</td>)}</tr>)}
         </tbody>
       </table>
     </section>
